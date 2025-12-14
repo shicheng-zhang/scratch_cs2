@@ -11,7 +11,7 @@ namespace fs = std::filesystem;
 string pixelToASCII (int strength_display) {
     const string ASCII_CHARS = " ._-=+*!&#%$@";
     int index = strength_display * (ASCII_CHARS.length () - 1) / 255;
-    return string (1, ASCII_CHARS[index]);
+    return string (1, ASCII_CHARS [index]);
 } int main () {
     string videos_folder = "videos";
     if (!fs::exists (videos_folder) || !fs::is_directory (videos_folder)) {
